@@ -60,7 +60,7 @@ class ImportTransactionsService {
 			}))
 		);
 
-		transRepository.save(newtransactions);
+		await transRepository.save(newtransactions);
 		await fs.promises.unlink(filepath);
 		return newtransactions;
   	}
